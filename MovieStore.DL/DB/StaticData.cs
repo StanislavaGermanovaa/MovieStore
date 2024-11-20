@@ -16,5 +16,13 @@ namespace MovieStore.DL.DB
             new Movie { Id = 3, Title = "The Dark Knight", Year = 2008 },
             new Movie { Id = 4, Title = "Arcane", Year = 2024 }
         };
+
+        public static List<Actor> Actors=new List<Actor> 
+        { 
+            new Actor { Id = 1, Name="Ivan" },
+            new Actor { Id = 2, Name="Hristo" },
+            new Actor { Id = 3,Name="Georgi" }
+
+        };
     }
 }
