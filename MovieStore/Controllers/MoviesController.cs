@@ -10,12 +10,10 @@ namespace MovieStore.Controllers
     public class MoviesController : ControllerBase
     {
         private readonly IMoviesService _movieService;
-        private readonly IActorRepository _actorRepository;
 
-        public MoviesController(IMoviesService movieService, IActorRepository actorRepository)
+        public MoviesController(IMoviesService movieService)
         {
             _movieService = movieService;
-            _actorRepository = actorRepository;
         }
 
         [HttpGet("GetAll")]
@@ -30,10 +28,10 @@ namespace MovieStore.Controllers
             _movieService.Add(movie);
         }
 
-        [HttpGet("GetAllActors")]
-        public IEnumerable<Actor> GetActors()
+        [HttpDelete("DeleteMovie{id}")]
+        public void Delete(int id)
         {
-            return _actorRepository.GetActors();
+            _movieService.DeleteMovieById(id);
         }
     }
 }

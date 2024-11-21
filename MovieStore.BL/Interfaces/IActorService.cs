@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace MovieStore.BL.Interfaces
 {
-    public interface IMoviesService
+    public interface IActorService
     {
-        List<Movie> GetAll();
-        void Add(Movie newMovie);
+        List<Actor> GetActors();
 
-        void DeleteMovieById(int id);
+        Actor GetActorById(int id);
     }
 }

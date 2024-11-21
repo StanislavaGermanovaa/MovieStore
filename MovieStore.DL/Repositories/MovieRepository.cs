@@ -16,5 +16,9 @@ namespace MovieStore.DL.Repositories
             StaticData.Movies.Add(newMovie);
         }
 
+        public void DeleteMovieById(int id)
+        {
+            StaticData.Movies.FirstOrDefault(m => m.Id == id);
+        }
     }
 }

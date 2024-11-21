@@ -12,5 +12,7 @@ namespace MovieStore.DL.Interfaces
     {
         List<Movie> GetMovies();
         void AddMovie(Movie newMovie);
+
+        void DeleteMovieById(int id);
     }
 }
