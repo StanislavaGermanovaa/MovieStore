@@ -28,8 +28,8 @@ namespace MovieStore.Controllers
             _movieService.Add(movie);
         }
 
-        [HttpDelete("DeleteMovie{id}")]
-        public void Delete(int id)
+        [HttpDelete("{id}")]
+        public void DeleteMovie(int id)
         {
             _movieService.DeleteMovieById(id);
         }
