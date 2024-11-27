@@ -1,3 +1,4 @@
+using Mapster;
 using MovieStore.BL;
 using MovieStore.DL;
 
@@ -7,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services
              .RegisterRepositories()
              .RegisterServices();
+
+builder.Services.AddMapster();
 
 
 builder.Services.AddControllers();
@@ -30,5 +33,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-
 
