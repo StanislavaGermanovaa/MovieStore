@@ -11,16 +11,26 @@ namespace MovieStore.Controllers
     {
         private readonly IMoviesService _movieService;
         private readonly IMapper _mapper;
+        private readonly ILogger<MoviesController> _logger;
 
-        public MoviesController(IMoviesService movieService, IMapper mapper)
+        public MoviesController(IMoviesService movieService, IMapper mapper, ILogger<MoviesController> logger)
         {
             _movieService = movieService;
             _mapper = mapper;
+            _logger = logger;
         }
 
         [HttpGet("GetAll")]
         public IEnumerable<Movie> Get()
         {
+            try
+            {
+                //code
+            }
+            catch (Exception e)
+            {
+                _logger.LogError("Error in GetAll movies");
+            }
             return _movieService.GetAll();
         }
 
