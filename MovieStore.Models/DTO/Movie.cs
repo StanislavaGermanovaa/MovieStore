@@ -14,6 +14,7 @@ namespace MovieStore.Models.DTO
 
         public int Year { get; set; }
 
+        public List<int> Actors { get; set; }
 
     }
 }

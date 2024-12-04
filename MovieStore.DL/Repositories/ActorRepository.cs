@@ -11,7 +11,7 @@ namespace MovieStore.DL.Repositories
 {
     public class ActorRepository : IActorRepository
     {
-        public Actor? GetActorById(int id)
+        public Actor? GetById(int id)
         {
             return StaticData.Actors.FirstOrDefault(actor => actor.Id == id);
         }
@@ -20,5 +20,6 @@ namespace MovieStore.DL.Repositories
         {
             return StaticData.Actors;
         }
+
     }
 }

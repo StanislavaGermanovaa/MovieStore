@@ -6,6 +6,7 @@ namespace MovieStore.DL.Interfaces
     {
         List<Actor> GetActors();
 
-        Actor GetActorById(int id);
+        Actor GetById(int id);
+       // object GetById(int actorId);
     }
 }
